@@ -1,5 +1,4 @@
 
-# buyer seller
 class User
     def initialize(first_name, last_name, date_of_birth, address, role)
                 @first_name = first_name
@@ -9,7 +8,7 @@ class User
                 @role =  role
     end 
 end
-user_raw_data = [
+arr = [
         {:first_name => 'alex', :last_name => 'newman',  :date_of_birth => '01-05-1982',  :address => 'sapna sangeeta', :role => 'buyer'},
         {:first_name => 'alex', :last_name => 'Panc',  :date_of_birth => '12-04-1990',  :address => 'bhanwar kua', :role => 'seller'},
         {:first_name => 'Meena', :last_name => 'Pallanipppan',  :date_of_birth => '03-02-1988',  :address => 'sapna sangeeta', :role => 'seller'},
@@ -18,7 +17,7 @@ user_raw_data = [
 ]
     
 results = []
-user_raw_data.each do |user|
+arr.each do |user|
     results << User.new(
                         user[:first_name],
                         user[:last_name],
